@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm CLock</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Current Time</h1>
+        <div class="demo">
+            <div class="c-demo"><span class="time" id="hour">11</span><span class="time-text">Hour</span></div>
+            <div class="c-demo"><span class="time" id="minutes">12</span><span class="time-text">Minute</span></div>
+            <div class="c-demo"><span class="time" id="seconds">13</span><span class="time-text">Second</span></div>
+            <div class="c-demo"><span class="time" id="zones">13</span><span class="time-text">Zone</span></div>
+        </div>
+
+        <div id="setAlarm">
+            <h2>Set Alarm:</h2>
+            <form id="formAction">
+                <div class="user_input">Hours<input name="user_hours" id="user_hours" type="text"></div>
+                <div class="user_input">Minutes<input name="user_minutes" id="user_minutes" type="text"></div>
+                <div class="user_input">Seconds
+                    <input name="user_seconds" id="user_seconds" type="text">
+                </div>
+                <div class="user">
+                    <select id="zone" name="zone" required>
+                        <option value="" selected disabled>Zone</option>
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+                <div class="btn btn-set">
+                    <button class="btn" id="set">Set</button>
+
+                </div>
+            </form>
+
+
+        </div>
+        <div id="active-alarm">
+            <div id="alarm-text"></div>
+        </div>
+        <audio id="alarm-audio"></audio>
+        <div class="btn-reset"> <button class="btn" id="reset">Reset</button></div>
+    </div>
+    <script src="app.js "></script>
+</body>
+
+</html>
